@@ -1,0 +1,205 @@
+{
+  "Persons": [
+    {
+      "Id": 1,
+      "FirstName": "Judy",
+      "LastName": "Garland"
+    },
+    {
+      "Id": 2,
+      "FirstName": "Judy",
+      "LastName": "Garland"
+    },
+    {
+      "Id": 3,
+      "FirstName": "Catherine",
+      "LastName": "Deneuve"
+    },
+    {
+      "Id": 4,
+      "FirstName": "Grace",
+      "LastName": "Kelly"
+    },
+    {
+      "Id": 5,
+      "FirstName": "Anthony",
+      "LastName": "Hopkins"
+    },
+    {
+      "Id": 6,
+      "FirstName": "Johnny",
+      "LastName": "Depp"
+    },
+    {
+      "Id": 7,
+      "FirstName": "Morgan",
+      "LastName": "Freeman"
+    },
+    {
+      "Id": 8,
+      "FirstName": "Henry",
+      "LastName": "Fonda"
+    },
+    {
+      "Id": 9,
+      "FirstName": "Bruce",
+      "LastName": "Lee"
+    },
+    {
+      "Id": 10,
+      "FirstName": "James",
+      "LastName": "Stewart"
+    },
+    {
+      "Id": 11,
+      "FirstName": "Laurence",
+      "LastName": "Olivier"
+    }
+  ],
+  "Drivers": [
+    {
+      "Id": 1,
+      "Person": 1,
+      "LicenseNumber": "1234-1"
+    },
+    {
+      "Id": 2,
+      "Person": 2,
+      "LicenseNumber": "1234-2"
+    },
+    {
+      "Id": 3,
+      "Person": 3,
+      "LicenseNumber": "1234-3"
+    }
+  ],
+  "Passengers": [
+    {
+      "Id": 1,
+      "Person": 4,
+      "DestinationStation": 1,
+      "IsActive": true
+    },
+    {
+      "Id": 2,
+      "Person": 5,
+      "DestinationStation": 1,
+      "IsActive": false
+    },
+    {
+      "Id": 3,
+      "Person": 6,
+      "DestinationStation": 1,
+      "IsActive": false
+    },
+    {
+      "Id": 4,
+      "Person": 7,
+      "DestinationStation": 1,
+      "IsActive": true
+    },
+    {
+      "Id": 5,
+      "Person": 8,
+      "DestinationStation": 2,
+      "IsActive": true
+    },
+    {
+      "Id": 6,
+      "Person": 9,
+      "DestinationStation": 2,
+      "IsActive": true
+    },
+    {
+      "Id": 7,
+      "Person": 10,
+      "DestinationStation": 3,
+      "IsActive": true
+    },
+    {
+      "Id": 8,
+      "Person": 11,
+      "DestinationStation": 3,
+      "IsActive": true
+    }
+  ],
+  "Stations": [
+    {
+      "Id": 1,
+      "Name": "Station 1",
+      "Address": "Address 1",
+      "Passengers": [ 1, 2, 3, 4 ],
+      "Order": 1,
+      "PlannedOrder": 1,
+      "IsActive": true
+    },
+    {
+      "Id": 2,
+      "Name": "Station 2",
+      "Address": "Address 2",
+      "Passengers": [ 5, 6 ],
+      "Order": 3,
+      "PlannedOrder": 2,
+      "IsActive": true
+    },
+    {
+      "Id": 3,
+      "Name": "Station 3",
+      "Address": "Address 3",
+      "Passengers": [ 7, 8 ],
+      "Order": 2,
+      "PlannedOrder": 3,
+      "IsActive": true
+    }
+  ],
+  "Rides": [
+    {
+      "Id": 1,
+      "Date": "02-02-2020",
+      "StartTime": "09:00",
+      "PlannedStartTime": "10:00",
+      "Stations": [ 1, 2 ],
+      "Driver": 2,
+      "PlannedDriver": 1,
+      "Cancelled": false
+    },
+    {
+      "Id": 2,
+      "Date": "11-02-2020",
+      "StartTime": "11:00",
+      "PlannedStartTime": "10:00",
+      "Stations": [ 1, 2, 3 ],
+      "Driver": 3,
+      "PlannedDriver": 3,
+      "Cancelled": false
+    },
+    {
+      "Id": 3,
+      "Date": "25-02-2020",
+      "StartTime": "09:00",
+      "PlannedStartTime": "9:00",
+      "Stations": [ 2, 3 ],
+      "Driver": 1,
+      "PlannedDriver": 2,
+      "Cancelled": true
+    },
+    {
+      "Id": 4,
+      "Date": "28-02-2020",
+      "StartTime": "09:00",
+      "PlannedStartTime": "9:00",
+      "Stations": [ 2, 3 ],
+      "Driver": 1,
+      "PlannedDriver": 2,
+      "Cancelled": true
+    }
+  ],
+  "Route": {
+    "Id": 1,
+    "Name": "Route 1",
+    "ActiveDays": "Monday, Tuesday, Wednesday",
+    "Rides": [ 1, 2, 3 ],
+    "StartDate": "01-02-2020",
+    "EndDate": "03-02-2020"
+  }
+}
